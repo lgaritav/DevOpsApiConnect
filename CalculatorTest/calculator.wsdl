@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="calculator" targetNamespace="http://www.example.org/calculator/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.example.org/calculator/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <generatedXSD location="calculator_InlineSchema1.xsd"/>
+        <binding hasEncoding="false" imported="true" name="calculatorSOAP" originalBindingStyle="document"/>
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+  <wsdl:types>
+    
+          <xsd:schema targetNamespace="http://www.example.org/calculator/" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions">
+<xsd:include schemaLocation="calculator_InlineSchema1.xsd"/>
+    </xsd:schema>
+    </wsdl:types>
+  <wsdl:message name="AddRequest">
+    <wsdl:part element="tns:Add" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="AddResponse">
+    <wsdl:part element="tns:AddResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="SubtractRequest">
+  	<wsdl:part element="tns:Subtract" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="SubtractResponse">
+  	<wsdl:part element="tns:SubtractResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="DivideRequest">
+  	<wsdl:part element="tns:Divide" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="DivideResponse">
+  	<wsdl:part element="tns:DivideResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="MultiplyRequest">
+  	<wsdl:part element="tns:Multiply" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="MultiplyResponse">
+  	<wsdl:part element="tns:MultiplyResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="calculator">
+    <wsdl:operation name="Add">
+      <wsdl:input message="tns:AddRequest"/>
+      <wsdl:output message="tns:AddResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="Subtract">
+    	<wsdl:input message="tns:SubtractRequest"/>
+    	<wsdl:output message="tns:SubtractResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="Divide">
+    	<wsdl:input message="tns:DivideRequest"/>
+    	<wsdl:output message="tns:DivideResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="Multiply">
+    	<wsdl:input message="tns:MultiplyRequest"/>
+    	<wsdl:output message="tns:MultiplyResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="calculatorSOAP" type="tns:calculator">
+
+  	<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+  	<wsdl:operation name="Add">
+
+  		<soap:operation soapAction="http://www.example.org/calculator/Add"/>
+  		<wsdl:input>
+
+  			<soap:body use="literal"/>
+  		</wsdl:input>
+  		<wsdl:output>
+
+  			<soap:body use="literal"/>
+  		</wsdl:output>
+  	</wsdl:operation>
+  	<wsdl:operation name="Subtract">
+  		<soap:operation soapAction="http://www.example.org/calculator/Subtract"/>
+  		<wsdl:input>
+  			<soap:body use="literal"/>
+  		</wsdl:input>
+  		<wsdl:output>
+  			<soap:body use="literal"/>
+  		</wsdl:output>
+  	</wsdl:operation>
+  	<wsdl:operation name="Divide">
+  		<soap:operation soapAction="http://www.example.org/calculator/Divide"/>
+  		<wsdl:input>
+  			<soap:body use="literal"/>
+  		</wsdl:input>
+  		<wsdl:output>
+  			<soap:body use="literal"/>
+  		</wsdl:output>
+  	</wsdl:operation>
+  	<wsdl:operation name="Multiply">
+  		<soap:operation soapAction="http://www.example.org/calculator/Multiply"/>
+  		<wsdl:input>
+  			<soap:body use="literal"/>
+  		</wsdl:input>
+  		<wsdl:output>
+  			<soap:body use="literal"/>
+  		</wsdl:output>
+  	</wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="calculator">
+    <wsdl:port binding="tns:calculatorSOAP" name="calculatorSOAP">
+      <soap:address location="http://www.example.org/calculator"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

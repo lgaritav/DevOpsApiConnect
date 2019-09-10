@@ -3,7 +3,7 @@
 	<name>CalculatorTest</name>
 	<comment></comment>
 	<projects>
-		<project>CalcMGS</project>
+		<project>CalculatorMST</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

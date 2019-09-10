@@ -7,7 +7,7 @@
     <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/CalculatorTest/icons/full/obj16/CalcMessageFlow.gif"/>
     <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/CalculatorTest/icons/full/obj30/CalcMessageFlow.gif"/>
     <composition>
-      <nodes xmi:type="ComIbmSOAPInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="75,123" wsdlFileName="fileCalc.wsdl" selectedPortType="CalculatorSoap" selectedBinding="CalculatorSoap" selectedPort="CalculatorSoap" targetNamespace="http://tempuri.org/" useHTTPTransport="true" urlSelector="/calculatorTest" allowQueryWSDL="true" parserXmlnscBuildTreeUsingXMLSchema="false" validateMaster="none">
+      <nodes xmi:type="ComIbmSOAPInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="75,123" wsdlFileName="calculator.wsdl" selectedPortType="calculator" selectedBinding="calculatorSOAP" selectedPort="calculatorSOAP" targetNamespace="http://www.example.org/calculator/" useHTTPTransport="true" urlSelector="/calculator" allowQueryWSDL="true" parserXmlnscBuildTreeUsingXMLSchema="false" validateMaster="none">
         <translation xmi:type="utility:ConstantString" string="SOAP Input"/>
       </nodes>
       <nodes xmi:type="gen_CalcSchema_calcWSDLTest_CalcMessageFlow.subflow:FCMComposite_1" xmi:id="FCMComposite_1_2" location="173,119">
