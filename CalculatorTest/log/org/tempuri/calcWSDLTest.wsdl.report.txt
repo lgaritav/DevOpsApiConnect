@@ -1,0 +1,31 @@
+
+
+Importing file: C:\Users\hbarrantes\IBM\ACET11\workspace\WSDL\calcWSDLTest.wsdl
+
+The WSDL import will proceed with bindings CalculatorSoap.
+Creating wsdl schema document for file:///C:/Users/hbarrantes/IBM/ACET11/workspace/WSDL/calcWSDLTest.wsdl.
+Parsing wsdl binding {http://tempuri.org/}CalculatorSoap.
+Parsing wsdl binding input Add.
+Parsing wsdl binding output Add.
+Parsing wsdl binding input Subtract.
+Parsing wsdl binding output Subtract.
+Parsing wsdl binding input Multiply.
+Parsing wsdl binding output Multiply.
+Parsing wsdl binding input Divide.
+Parsing wsdl binding output Divide.
+Processing doc style for operation Add.
+Processing doc style for operation Subtract.
+Processing doc style for operation Multiply.
+Processing doc style for operation Divide.
+Populating WSDL schema calcWSDLTest.xsd.
+Creating file calcWSDLTest.xsd in the workspace.
+Creating file calcWSDLTest_InlineSchema1.xsd in the workspace.
+Copying source WSDL calcWSDLTest.wsdl to calcWSDLTest.wsdl.
+
+Elapsed time processing this message definition file: 0.359 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+
