@@ -1,0 +1,116 @@
+
+versions compose redis
+standard y entreprise
+
+hperleadger compose
+
+
+query bd
+
+
+/emplo?rev=sdsad
+
+
+wat spec to text como cobra por words o sentences _____ https://cloud.ibm.com/docs/services/speech-to-text?topic=speech-to-text-faq-pricing cobra por minuto
+
+cloud object storage
+
+
+
+ibm cloud functions
+
+chart de helm
+
+
+
+
+
+
+{{{{{{{{{{{{{
+
+7-12
+
+Watson Text to Speech: Pricing
+Convert written text into natural-sounding audio in a variety of languages and voices. 
+Characters per Month
+
+
+Watson Speech to Text
+Transform voice into written text with powerful machine learning technology, 
+Minutes per Month
+
+
+versions chart helm
+
+comunicate kafka con mq y con object storage
+
+versiones de redis, single and fully
+
+watson, even prediction 
+
+borrar un delete con rev
+
+
+
+https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-about#about_technology
+Package
+    Integrations with services and event providers can be added with packages. A package is a bundle of feeds and actions
+	
+	
+File Storage
+Data-At-Rest Encryption (Available in select data centers.)
+
+    Provider-managed encryption for data-at-rest is provided at no additional cost
+
+
+	
+Availability Monitoring
+Be proactive
+Be alerted on issues-via email, Slack, SMS or Push notification-BEFORE they impact users. Create alert policies to reduce alert noise via seamless integration with Alert Notification service
+SE USA EMAIL Y SLACK, NO HACE LLAMADAS
+
+
+
+
+
+An example GeoJSON document:
+
+{
+    "_id": "79f14b64c57461584b152123e38a6449",
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-71.13687953, 42.34690635]
+    },
+    "properties": {
+        "compnos": "142035014",
+        "domestic": false,
+        "fromdate": 1412209800000,
+        "main_crimecode": "MedAssist",
+        "naturecode": "EDP",
+        "reptdistrict": "D14",
+        "shooting": false,
+        "source": "boston"
+    ..}
+}
+
+
+
+Delete a document
+
+To delete a document, send a DELETE request with the document's most recent _rev in the query string, to https://$ACCOUNT.cloudant.com/$DATABASE/$DOCUMENT_ID.
+
+The response contains the ID and the new revision of the document, or an error message if the delete failed.
+
+Example of using HTTP to delete a document
+
+
+
+DELETE /$DATABASE/$DOCUMENT_ID?rev=$REV HTTP/1.1
+
+Example of using the command line to delete a document
+
+
+
+# make sure $JSON contains the correct `_rev` value!
+curl "https://$ACCOUNT.cloudant.com/$DATABASE/$DOCUMENT_ID?rev=$REV" -X DELETE
