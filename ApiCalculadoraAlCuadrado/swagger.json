@@ -1,0 +1,55 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "title" : "ApiCalculadoraAlCuadrado",
+    "version" : "1.0.0",
+    "description" : "Calculadora para números al cuadrado"
+  },
+  "paths" : {
+    "/operaciones" : {
+      "post" : {
+        "operationId" : "postOperaciones",
+        "responses" : {
+          "200" : {
+            "description" : "The operation was successful.",
+            "schema" : {
+              "$ref" : "#/definitions/CalculadoraAlCuadradoOutput"
+            }
+          }
+        },
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "description" : "Ejecuta la operacion de elevar al cuadrado un número",
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "schema" : {
+            "$ref" : "#/definitions/CalculadoraAlCuadradoInput"
+          },
+          "description" : "The request body for the operation",
+          "required" : true
+        } ]
+      }
+    }
+  },
+  "basePath" : "/calculadoraalcuadrado/v1",
+  "definitions" : {
+    "CalculadoraAlCuadradoInput" : {
+      "type" : "object",
+      "properties" : {
+        "numero" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "numero" ]
+    },
+    "CalculadoraAlCuadradoOutput" : {
+      "type" : "object",
+      "properties" : {
+        "resultado" : {
+          "type" : "integer"
+        }
+      }
+    }
+  }
+}

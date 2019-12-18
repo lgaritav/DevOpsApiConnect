@@ -1,0 +1,25 @@
+
+
+CREATE COMPUTE MODULE postOperaciones_ElevarNumeroCuadrado
+	
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		DECLARE A DECIMAL;
+		DECLARE B CHARACTER;
+		DECLARE formatoMonto CHARACTER '##0.00';
+		------------------------------------------------	
+		SET A = InputRoot.JSON.Data.numero;
+		------------------------------------------------
+		SET OutputRoot = InputRoot;
+		------------------------------------------------
+		SET OutputLocalEnvironment.DataEntrada.numero = A;		
+		------------------------------------------------
+		SET OutputRoot.JSON.Data = NULL;
+		------------------------------------------------	
+		SET B = A * A;
+		SET OutputRoot.JSON.Data.resultado = CAST(B AS CHARACTER FORMAT formatoMonto);
+		------------------------------------------------
+		RETURN TRUE;
+	END;
+	
+END MODULE;
